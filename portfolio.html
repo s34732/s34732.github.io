@@ -106,11 +106,20 @@ border:1px solid #ddd;
 box-shadow:0 8px 30px #00000010
 }
 
-.certificate img{
+/* ปรับการจัดวางรูปภาพเกียรติบัตรและรูปภาพเราให้อยู่ข้างกัน */
+.cert-images{
+display:grid;
+grid-template-columns:1fr 1fr;
+background:#eee;
+border-bottom:1px solid #eee;
+gap:2px;
+}
+
+.cert-images img{
 display:block;
 width:100%;
-max-height:700px;
-object-fit:contain;
+height:350px;
+object-fit:cover;
 background:#eee
 }
 
@@ -183,9 +192,13 @@ font-size:12px
 font-size:42px
 }
 
-.certificate img{
-max-height:none;
-width:100%
+.cert-images{
+grid-template-columns:1fr;
+}
+
+.cert-images img{
+height:auto;
+max-height:400px;
 }
 
 }
@@ -241,9 +254,13 @@ MY ACHIEVEMENTS
 
 <div class="certificates">
 
+<!-- รายการที่ 1 -->
 <div class="certificate">
 
+<div class="cert-images">
 <img src="001.jpg" alt="เกียรติบัตรใบที่ 1">
+<img src="my-photo-01.jpg" alt="รูปภาพเข้าร่วมกิจกรรม 1">
+</div>
 
 <div class="cert-info">
 
@@ -257,9 +274,13 @@ MY ACHIEVEMENTS
 
 </div>
 
+<!-- รายการที่ 2 -->
 <div class="certificate">
 
+<div class="cert-images">
 <img src="002.jpg" alt="เกียรติบัตรใบที่ 2">
+<img src="my-photo-02.jpg" alt="รูปภาพเข้าร่วมกิจกรรม 2">
+</div>
 
 <div class="cert-info">
 
@@ -273,9 +294,13 @@ MY ACHIEVEMENTS
 
 </div>
 
+<!-- รายการที่ 3 -->
 <div class="certificate">
 
+<div class="cert-images">
 <img src="003.jpg" alt="เกียรติบัตรใบที่ 3">
+<img src="my-photo-03.jpg" alt="รูปภาพเข้าร่วมกิจกรรม 3">
+</div>
 
 <div class="cert-info">
 
@@ -289,9 +314,13 @@ MY ACHIEVEMENTS
 
 </div>
 
+<!-- รายการที่ 4 -->
 <div class="certificate">
 
+<div class="cert-images">
 <img src="004.jpg" alt="เกียรติบัตรใบที่ 4">
+<img src="my-photo-04.jpg" alt="รูปภาพเข้าร่วมกิจกรรม 4">
+</div>
 
 <div class="cert-info">
 
@@ -299,22 +328,6 @@ MY ACHIEVEMENTS
 
 <h2>
 เกียรติบัตรใบที่ 4
-</h2>
-
-</div>
-
-</div>
-
-<div class="certificate">
-
-<img src="001.jpg" alt="เกียรติบัตรใบที่ 5">
-
-<div class="cert-info">
-
-<small>05</small>
-
-<h2>
-เกียรติบัตรใบที่ 5
 </h2>
 
 </div>
